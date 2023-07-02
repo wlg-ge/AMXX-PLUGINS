@@ -52,7 +52,7 @@ public spec_transfer(id) {
 		client_print_color(id, print_team_default, "%s You have been moved to^4 Spectator^1 team", CHAT_PREFIX);
 	}
 	else client_print_color(id, print_team_default, "%s You are already in^4 Spectator^1 team!", CHAT_PREFIX);
-
+	
 	return PLUGIN_HANDLED;
 }
 
@@ -68,27 +68,22 @@ public back_transfer(id) {
 		switch (rand)
 		{
 			case 1: {
-				user_kill(id);
-				engclient_cmd(id, "jointeam", "0");
-				/* engclient_cmd(id, "joinclass", "1"); */
-				/* cs_set_user_team(id, CS_TEAM_CT); */
-				/* give_item(id, "weapon_knife"); */
-				/* give_item(id, "weapon_usp"); */
-				/* give_item(id, "ammo_45acp"); */
-				/* give_item(id, "ammo_45acp"); */
-				/* engclient_cmd(id, "joinclass", "6"); */
-				/* client_print_color(id, print_team_default, "%s You are in^4 Counter-Terrorist^1 team now", CHAT_PREFIX); */
+				cs_set_user_team(id, CS_TEAM_CT); 
+				engclient_cmd(id, "jointeam", "2");
+				engclient_cmd(id, "joinclass", "6"); 
+				give_item(id, "weapon_knife"); 
+				give_item(id, "weapon_usp"); 
+				give_item(id, "ammo_45acp"); 
+				client_print_color(id, print_team_default, "%s You are in^4 Counter-Terrorist^1 team now", CHAT_PREFIX); 
 			}
 			case 2: {
-				user_kill(id);
-				engclient_cmd(id, "jointeam", "0");
-				/* engclient_cmd(id, "joinclass", "1"); */
-				/* cs_set_user_team(id, CS_TEAM_T); */
-				/* give_item(id, "weapon_knife"); */
-				/* give_item(id, "weapon_glock18"); */
-				/* give_item(id, "ammo_9mm"); */
-				/* engclient_cmd(id, "joinclass", "6"); */
-				/* client_print_color(id, print_team_default, "%s You are in^4 Terrorist^1 team now", CHAT_PREFIX); */
+				cs_set_user_team(id, CS_TEAM_T);
+				engclient_cmd(id, "jointeam", "1");
+				engclient_cmd(id, "joinclass", "6"); 
+				give_item(id, "weapon_knife"); 
+				give_item(id, "weapon_glock18"); 
+				give_item(id, "ammo_9mm"); 
+				client_print_color(id, print_team_default, "%s You are in^4 Terrorist^1 team now", CHAT_PREFIX); 
 			}
 		}
 	}
@@ -111,11 +106,12 @@ public check_clients() {
 }
 
 /* AMXX-Studio Notes - DO NOT MODIFY BELOW HERE
- *{\\ rtf1\\ ansi\\ deff0{\\ fonttbl{\\ f0\\ fnil Tahoma;}}\n\\ viewkind4\\ uc1\\ pard\\ lang1049\\ f0\\ fs16 *\\ {\\ \\ rtf1\\ \\ ansi\\ \\ deff0\\ {\\ \\ fonttbl\\ {\\ \\ f0\\ \\ fnil Tahoma;\\ }\\ }\n\\ par \\ \\ viewkind4\\ \\ uc1\\ \\ pard\\ \\ lang1049\\ \\ f0\\ \\ fs16 \n\\ par \\ \\ par \\ }\n\\ par }
+*{\\ rtf1\\ ansi\\ deff0{\\ fonttbl{\\ f0\\ fnil Tahoma;}}\n\\ viewkind4\\ uc1\\ pard\\ lang1049\\ f0\\ fs16 *\\ {\\ \\ rtf1\\ \\ ansi\\ \\ deff0\\ {\\ \\ fonttbl\\ {\\ \\ f0\\ \\ fnil Tahoma;\\ }\\ }\n\\ par \\ \\ viewkind4\\ \\ uc1\\ \\ pard\\ \\ lang1049\\ \\ f0\\ \\ fs16 \n\\ par \\ \\ par \\ }\n\\ par }
 
-        client_print_color(id, print_team_default, "%s use M key for select team!", CHAT_PREFIX);
-        set_hudmessage(255, 255, 255, -1.0, -1.0, 2, 6.0, 6.0);
-        show_hudmessage(id, "use < M > key for select team!");
-
-
- */
+client_print_color(id, print_team_default, "%s use M key for select team!", CHAT_PREFIX);
+set_hudmessage(255, 255, 255, -1.0, -1.0, 2, 6.0, 6.0);
+show_hudmessage(id, "use < M > key for select team!");
+*/
+/* AMXX-Studio Notes - DO NOT MODIFY BELOW HERE
+*{\\ rtf1\\ ansi\\ deff0{\\ fonttbl{\\ f0\\ fnil Tahoma;}}\n\\ viewkind4\\ uc1\\ pard\\ lang1049\\ f0\\ fs16 \n\\ par }
+*/
