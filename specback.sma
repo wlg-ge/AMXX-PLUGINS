@@ -18,6 +18,8 @@ public plugin_init() {
 	register_clcmd("say_team /spec", "spec_transfer");
 	register_clcmd("say /back", "back_transfer");
 	register_clcmd("say_team /back", "back_transfer");
+	register_clcmd("say /join", "back_transfer");
+	register_clcmd("say_team /join", "back_transfer");	
 	register_clcmd("chooseteam", "ClientCommand_ChooseTeam");
 	register_event("ResetHUD", "playerSpawned", "be");
 	g_maxplayers = get_maxplayers();
