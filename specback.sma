@@ -13,7 +13,7 @@ new g_num, g_maxplayers;
 new bool:WAS_ASSIGNED[33];
 
 public plugin_init() {
-	register_plugin("Spec/Back", "0.1", "WLG");
+	register_plugin("Spec/Back", "0.1", "WLG & Vaqtincha");
 	register_clcmd("say /spec", "spec_transfer");
 	register_clcmd("say_team /spec", "spec_transfer");
 	register_clcmd("say /back", "back_transfer");
